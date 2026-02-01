@@ -2,6 +2,7 @@
 This program prints stdin to the screen.
 '''python
 
+
 import sys
 
 def cat(file):
