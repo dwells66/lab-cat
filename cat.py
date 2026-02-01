@@ -10,7 +10,7 @@ def cat(file):
         chunk=file.read(chunk_size)
         if not chunk: 
             break
-        sys.standout.buffer.write(chunk)
+        sys.stdout.buffer.write(chunk)
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
