@@ -1,4 +1,7 @@
 ```
+This program prints stdin to the screen
+
+```
 import sys
 
 def cat(file):
@@ -16,5 +19,4 @@ if __name__ == "__main__":
                 cat(f)
     else:
         cat(sys.stdin.buffer)
-```
 
