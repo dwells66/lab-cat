@@ -1,16 +1,15 @@
-```
-This program prints stdin to the screen
-
-```
+'''
+This program prints stdin to the screen.
+'''
 import sys
 
 def cat(file):
     chunk_size = 4096
     while True:
-        chunk = file.read(chunk_size)
-        if not chunk:
+        data = file.read(chunk_size)
+        if not data:
             break
-        sys.stdout.buffer.write(chunk)
+        sys.stdout.buffer.write(data)
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
@@ -19,4 +18,3 @@ if __name__ == "__main__":
                 cat(f)
     else:
         cat(sys.stdin.buffer)
-
