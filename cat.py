@@ -6,10 +6,10 @@ import sys
 def cat(file):
     chunk_size = 4096
     while True:
-        data = file.read(chunk_size)
-        if not data:
+        chunk = file.read(chunk_size)
+        if not chunk:
             break
-        sys.stdout.buffer.write(data)
+        sys.stdout.buffer.write(chunk)
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
